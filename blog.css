@@ -1,0 +1,90 @@
+.globall{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+.contai{
+    display: flex;
+    height: 100vh;
+    width: 85%;
+}
+.leftfilter{
+    width: 25%;
+    height: 100%;
+    padding: 10px;
+    
+}
+.rightArticle{
+    width: 75%;
+    height: 100%;
+}
+
+.serch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.serch a{
+    position: absolute;
+    margin-left: 15.5%;
+}
+.serch input{
+    width:90%;
+    height: 30px;
+    border: none;
+    border-bottom:1px solid rgba(128, 128, 128, 0.274);
+}
+.form{
+    width: 100%;
+}
+
+.dropdown {
+    width: 90%;
+    margin-left:12px;
+    margin-top: 20px;
+}
+.dropdown select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown select option {
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+}
+.rang{
+    margin-top: 30px;
+    margin-left: 12px;
+}
+.rang input{
+    width: 90%;
+}
+.rang p{
+    margin-top: 10px;
+    font-size: 16px; 
+}
+.radio{
+    margin-top: 20px;
+    margin-left: 10px;
+    display: grid;
+    width: 90%;
+    opacity: .6;
+   
+}
+.radio .onsale{
+    display: flex;
+    justify-content: space-between;
+}
+.radio .insock{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    
+}
