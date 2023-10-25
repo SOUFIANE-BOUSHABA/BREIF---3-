@@ -150,6 +150,7 @@ function removeProduct(i) {
             })
     afichage();
     TotalPanier();
+    updateTotal();
 }
 
 //  toltal in header
