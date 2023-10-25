@@ -43,11 +43,14 @@
                 <div class="cart-header-item">Total</div>
                 <div class="cart-header-item">Action</div>
             </div>
+
             <div id="cart-items">
                   
            </div>
            
-    
+           <div class="TotalTOcheckout">
+            Total: $<span id="total-amount">0.00</span>
+           </div>
            
         </div>
     </div>
@@ -93,8 +96,9 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     afichage();
-});
+    updateTotal();
 
+});
 function afichage() {
     const cartContainer = document.getElementById("cart-items");
     cartContainer.innerHTML = ""; 
@@ -167,8 +171,25 @@ function tottal(i) {
     var total = price * quantity;
 
     totalElement.textContent = `$${total.toFixed(2)}`;
+    updateTotal();
 }
 
+
+function updateTotal() {
+    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+    let totalAmount = 0;
+
+    for (let i = 0; i < cartItems.length; i++) {
+        const product = cartItems[i];
+        const totalElement = document.getElementById(`price-products-total-${i}`);
+        const total = parseFloat(totalElement.textContent.replace('$', ''));
+        totalAmount += total;
+    }
+
+    const totalAmountElement = document.getElementById("total-amount");
+    totalAmountElement.textContent = totalAmount.toFixed(2);
+}
 
 
     </script>
