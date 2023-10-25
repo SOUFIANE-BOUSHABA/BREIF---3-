@@ -159,11 +159,11 @@ function TotalPanier() {
     const cartCountElement = document.getElementById("cart-counttt"); 
 
     if (cartCountElement) {
-        let Itemcountt = 0;
+        let itemCount = 0;
         for (const item of cartItems) {
-          Itemcountt += item.quantity;
+          itemCount += item.quantity;
         }
-        cartCountElement.textContent = Itemcountt.toString();
+        cartCountElement.textContent = itemCount.toString();
     }
 }
 TotalPanier();
