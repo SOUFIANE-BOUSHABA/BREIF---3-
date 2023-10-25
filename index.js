@@ -150,6 +150,7 @@ function removeProduct(i) {
             })
     afichage();
     TotalPanier();
+    updateTotal();
 }
 
 //  toltal in header
@@ -158,9 +159,11 @@ function TotalPanier() {
     const cartCountElement = document.getElementById("cart-counttt"); 
 
     if (cartCountElement) {
-        const itemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+        let itemCount = 0;
+        for (const item of cartItems) {
+          itemCount += item.quantity;
+        }
         cartCountElement.textContent = itemCount.toString();
-        console.log(itemCount);
     }
 }
 TotalPanier();
